@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Release
 on:
   push:
@@ -7,12 +8,15 @@ permissions:
   contents: write
 
 jobs:
+=======
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87
   build-linux:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
+<<<<<<< HEAD
       - run: pip install -r requirements.txt pyinstaller
       - run: pyinstaller headmouse.spec
       - run: bash packaging/build_deb.sh ${GITHUB_REF_NAME#v}
@@ -41,3 +45,11 @@ jobs:
         with:
           files: artifacts/*
           generate_release_notes: true
+=======
+      - run: sudo apt-get update && sudo apt-get install -y xvfb libgl1 libglib2.0-0 libxcb-cursor0 libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-shape0
+      - run: pip install -r requirements.txt pyinstaller
+      - run: xvfb-run -a pyinstaller --noconfirm --clean HeadMouse.spec
+      - run: bash packaging/build_deb.sh ${GITHUB_REF_NAME#v}
+      - uses: actions/upload-artifact@v4
+        with: { name: deb, path: "*.deb" }
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87

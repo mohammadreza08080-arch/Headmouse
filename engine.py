@@ -223,4 +223,8 @@ class HeadMouseEngine:
 
         cv2.circle(view, pt(NOSE_TIP), 5, ACCENT, -1, cv2.LINE_AA)
         if now < self._flash_until:
+<<<<<<< HEAD
             self._text(view, self._flash_text, (0, 230, 255), 1.0, (16, 40))
+=======
+            self._text(view, self._flash_text, (0, 230, 255), 1.0, (16, 40))
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87

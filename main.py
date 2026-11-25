@@ -14,6 +14,7 @@ from PySide6.QtWidgets import QApplication  # noqa: E402
 
 from ui import STYLE, MainWindow  # noqa: E402
 
+<<<<<<< HEAD
 
 import sys
 
@@ -22,13 +23,19 @@ from PySide6.QtWidgets import QApplication
 from ui import MainWindow, STYLE
 
 
+=======
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87
 def main() -> int:
     if sys.platform == "win32":
         import ctypes
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("YourCompany.HeadMouse")
 
     app = QApplication(sys.argv)          # just one more
+<<<<<<< HEAD
     app.setDesktopFileName("headmouse")   # Linux: matches headmouse.desktop
+=======
+    app.setDesktopFileName("headmouse")   # linux
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87
     app.setStyleSheet(STYLE)
 
     window = MainWindow()
@@ -36,9 +43,12 @@ def main() -> int:
 
     return app.exec()
 
+<<<<<<< HEAD
 if sys.platform =="win32":
     import ctypes
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("YourCompany.HeadMouse")
 
+=======
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87
 if __name__ == "__main__":
     sys.exit(main())

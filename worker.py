@@ -2,7 +2,11 @@
 from __future__ import annotations
 
 import time
+<<<<<<< HEAD
 import os
+=======
+
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87
 import cv2
 from PySide6.QtCore import QThread, Signal
 from PySide6.QtGui import QImage
@@ -12,6 +16,10 @@ from engine import HeadMouseEngine, Settings
 
 MAX_WIDTH = 960  # larger frames are downscaled to keep tracking fast
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87
 class CameraWorker(QThread):
     frame_ready = Signal(QImage)
     info_ready = Signal(object)
@@ -102,4 +110,8 @@ class CameraWorker(QThread):
         finally:
             cap.release()
             if engine is not None:
+<<<<<<< HEAD
                 engine.close()
+=======
+                engine.close()
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87

@@ -80,4 +80,8 @@ def list_cameras(max_probe: int = 10) -> list[CameraInfo]:
             if _probe(i, api):
                 label = f" · {_LABELS[api]}" if multi and api in _LABELS else ""
                 cameras.append(CameraInfo(i, f"Camera {i}{label}", api))
+<<<<<<< HEAD
     return cameras
+=======
+    return cameras
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87

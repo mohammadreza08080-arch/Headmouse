@@ -14,6 +14,7 @@ from cameras import CameraInfo, list_cameras
 from engine import FrameInfo, Settings
 from worker import CameraWorker
 
+<<<<<<< HEAD
 # app icon
 import os
 import sys
@@ -21,6 +22,13 @@ import sys
 def resource_path(*parts: str) -> str:
     """Works both from source and from the PyInstaller bundle."""
     base = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
+=======
+import sys, os
+
+# app icon
+def resource_path(*parts:str) -> str:
+    base = getattr(sys, "_MEIPASS", os.path.dirname(__file__))
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87
     return os.path.join(base, *parts)
 
 # ---- Design tokens (match these 1:1 with your Figma styles) -------------------------
@@ -359,4 +367,8 @@ class MainWindow(QMainWindow):
     def closeEvent(self, event: QCloseEvent) -> None:
         self._stop()
         self._save_settings()
+<<<<<<< HEAD
         event.accept()
+=======
+        event.accept()
+>>>>>>> 6ddbd6d34625823d48407cb037dd5172bfb56a87
